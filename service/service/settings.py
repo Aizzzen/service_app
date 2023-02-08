@@ -151,3 +151,6 @@ LOGGING = {
 
 # дебажатся все     / только ошибки
 # 'level': 'DEBUG' / 'WARNING'
+
+#       протокол(как http)://hostname:порт по умолчанию/обращаемся к нулевой БД
+CELERY_BROKER_URL = 'redis://redis:6379/0'
