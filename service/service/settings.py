@@ -152,5 +152,19 @@ LOGGING = {
 # дебажатся все     / только ошибки
 # 'level': 'DEBUG' / 'WARNING'
 
+
 #       протокол(как http)://hostname:порт по умолчанию/обращаемся к нулевой БД
 CELERY_BROKER_URL = 'redis://redis:6379/0'
+
+
+# универсальная логика для хранения кеша
+# в случае чего можно просто заменить переменную redis
+CASHES = {
+  'default': {
+      'BACKEND': 'django_redis.cache.RedisCache',
+      'LOCATION': 'redis://redis:6379/1',
+  }
+}
+
+PRICE_CACHE_NAME = 'price_cache'
+
